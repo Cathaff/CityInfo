@@ -3,8 +3,10 @@
 namespace CityInfo.API.Controllers
 {
     [ApiController]
+    [Route("api/cities")]
     public class CitiesController : ControllerBase
     {
+        [HttpGet]
         public JsonResult GetCities()
         {
             // Create an object
