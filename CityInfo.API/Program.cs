@@ -2,7 +2,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+// For multi-server purpose
+//builder.Services.AddProblemDetails(options =>
+//{
+//    options.CustomizeProblemDetails = ctx =>
+//    {
+//        ctx.ProblemDetails.Extensions.Add("addtionalInfo", "Addtional info example");
+
+//        ctx.ProblemDetails.Extensions.Add("server", Environment.MachineName);
+//    };
+//});
+
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable = true;
+}).AddXmlDataContractSerializerFormatters();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
