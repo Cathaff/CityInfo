@@ -20,7 +20,6 @@ namespace CityInfo.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<PointOfInterestDto>> GetPointsOfInterst(int cityId) 
         {
-            throw new Exception("Exception sample");
             try
             {
                 
