@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZZekHBV3WZ8=",
+  "dgSpecHash": "JIrtqA0IOyY=",
   "success": true,
   "projectFilePath": "C:\\Users\\catfri\\source\\repos\\CityInfo\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\catfri\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\catfri\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\catfri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\catfri\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.7\\microsoft.aspnetcore.jsonpatch.8.0.7.nupkg.sha512",
     "C:\\Users\\catfri\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.7\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.7.nupkg.sha512",
