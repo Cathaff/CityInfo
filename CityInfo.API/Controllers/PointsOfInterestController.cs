@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using CityInfo.API.Models;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -10,9 +11,10 @@ using System.Xml.XPath;
 
 namespace CityInfo.API.Controllers
 {
-    [Route("api/cities/{cityId}/pointsofinterest")]
+    [Route("api/v{version:apiVersion}/cities/{cityId}/pointsofinterest")]
     [Authorize(Policy = "MustBeFromAntwerp")]
     [ApiController]
+    [ApiVersion(2)]
     public class PointsOfInterestController : ControllerBase
     {
         private readonly ILogger<PointsOfInterestController> _logger;
@@ -37,7 +39,7 @@ namespace CityInfo.API.Controllers
         {
             var cityName = User.Claims.FirstOrDefault(c => c.Type == "city")?.Value;
 
-            if (!await _cityInfoRepository.CityNameMatchesCityId(cityName, cityId)) 
+            if (!await _cityInfoRepository.CityNameMatchesCityId(cityName, cityId))
             {
                 return Forbid();
             }
